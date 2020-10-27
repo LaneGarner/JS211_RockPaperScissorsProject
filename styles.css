@@ -1,0 +1,59 @@
+* {
+    font-family: sans-serif;
+}
+
+.rps-match {
+    display: flex;
+    font-size: 100px;
+}
+
+.hand:nth-of-type(1) {
+    padding-right: 20px; 
+}
+
+.hand:nth-of-type(2) {
+    padding-left: 20px; 
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hand {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hand p {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+#player1 {
+    color: #2ECC40;
+}
+
+#computer {
+    color: tomato;
+}
+
+#winner {
+    font-size: 50px;
+    /* color: tomato; */
+    font-weight: 800;
+}
+
+input {
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+button {
+    margin-bottom: 20px;
+    font-size: 20px;
+    padding: 5px;
+    cursor: pointer;
+}

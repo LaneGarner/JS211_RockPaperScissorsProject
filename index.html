@@ -2,14 +2,31 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title></title>
-    <script src="main.js"></script>
+    <title>Rock, Paper, Scissors</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="main2.js"></script>
   </head>
   <body>
-    <h1>Hello World!</h1>
-    <hr/>
+    <h1>Rock, Paper, Scissors</h1>
     <div id="display-element"></div>
-    <button onclick="displayDate()">Click Me</button>
-    <hr/>
+
+    <div class="rps-match">
+      <div class="hand">
+        <p id="player1">Player 1</p>
+        <div id="hand1-move"></div>
+        <div id="hand1">🤜</div>
+      </div>
+      <div class="hand">
+        <p id="computer">Computer</p>
+        <div id="hand2-move"></div>
+        <div id="hand2" class="hand">🤛</div>
+      </div>
+    </div>
+
+    <label for="hand1-input">Type rock, paper, or scissors below then click submit</label><br>
+    <input type="text" id="hand1-input" placeholder="rock, paper, scissors">
+    <button onclick="rockPaperScissors()">Submit</button>
+    
+    <div id="winner"></div>
   </body>
 </html>
