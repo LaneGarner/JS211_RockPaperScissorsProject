@@ -8,6 +8,8 @@
   </head>
   <body>
     <h1>Rock, Paper, Scissors</h1>
+    <div id="winner"></div>
+
     <div id="display-element"></div>
 
     <div class="rps-match">
@@ -23,10 +25,14 @@
       </div>
     </div>
 
-    <label for="hand1-input">Type rock, paper, or scissors below then click submit</label><br>
-    <input type="text" id="hand1-input" placeholder="rock, paper, scissors">
-    <button onclick="rockPaperScissors()">Submit</button>
+    <!-- <form onsubmit="rockPaperScissors()"> -->
+    <form onsubmit="return false">
+      <label for="hand1-input">Type rock, paper, or scissors below then click submit or press enter</label><br>
+      <input type="text" id="hand1-input" placeholder="rock, paper, scissors">
+      <!-- <button id="submit">Submit</button> -->
+      <!-- <input type="submit" value="submit"> -->
+      <button id="submit" onclick="rockPaperScissors()">Submit</button>
+    </form>
     
-    <div id="winner"></div>
   </body>
 </html>
