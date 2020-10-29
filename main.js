@@ -66,6 +66,11 @@ if (typeof describe === 'function') {
       assert.equal(rockPaperScissors('Paper', 'SCISSORS'), "Hand two wins!");
       assert.equal(rockPaperScissors('rock ', 'sCiSsOrs'), "Hand one wins!");
     });
+    it('should scrub input to ensure correct spelling', () => {
+      assert.equal(rockPaperScissors('rokc', ' papre '), 'Please enter "rock", "paper", or "scissors"');
+      assert.equal(rockPaperScissors('ppr', 'sisors'), 'Please enter "rock", "paper", or "scissors"');
+      assert.equal(rockPaperScissors('rcok ', 'skisor'), 'Please enter "rock", "paper", or "scissors"');
+    });
     it('should scrub input to ensure user has typed input', () => {
       assert.equal(rockPaperScissors(' ', ' '), 'Please enter "rock", "paper", or "scissors"');
     });
