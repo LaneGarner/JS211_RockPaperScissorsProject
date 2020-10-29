@@ -13,12 +13,14 @@ const rl = readline.createInterface({
 
 // the function that will be called by the unit test below
 const rockPaperScissors = (hand1, hand2) => {
-  hand1 = hand1.trim();
-  hand2 = hand2.trim();
-  hand1 = hand1.toLowerCase();
-  hand2 = hand2.toLowerCase();
+  hand1 = hand1.trim().toLowerCase();
+  hand2 = hand2.trim().toLowerCase();
+  // hand1 = hand1.toLowerCase();
+  // hand2 = hand2.toLowerCase();
 
-  if (hand1 === hand2) {
+  if (hand1 === '' || hand2 === '') {
+    return('Please enter "rock", "paper", or "scissors"')
+  } else if (hand1 === hand2) {
       return('It\'s a tie!')
   } else if 
       ((hand1 === 'rock' && hand2 === 'scissors') || (hand1 === 'paper' && hand2 === 'rock') || (hand1 === 'scissors' && hand2 === 'paper')) {
@@ -63,6 +65,9 @@ if (typeof describe === 'function') {
       assert.equal(rockPaperScissors('rOcK', ' paper '), "Hand two wins!");
       assert.equal(rockPaperScissors('Paper', 'SCISSORS'), "Hand two wins!");
       assert.equal(rockPaperScissors('rock ', 'sCiSsOrs'), "Hand one wins!");
+    });
+    it('should scrub input to ensure user has typed input', () => {
+      assert.equal(rockPaperScissors(' ', ' '), 'Please enter "rock", "paper", or "scissors"');
     });
   });
 } else {
