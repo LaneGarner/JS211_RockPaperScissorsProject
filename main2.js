@@ -1,15 +1,4 @@
-// let hand1 = document.querySelector('#hand1-input').nodeValue;
-// console.log(hand1)
-
 const output = (id, type) => document.querySelector(id).innerHTML= type;
-
-// document.getElementById("hand1-input").addEventListener("keyup", function(event) {
-//     event.preventDefault();
-//     if (KeyBoardEvent.key === 13) {
-//         document.getElementById("submit").click();
-//     }
-//     });
-
 
 const rockPaperScissors = () => {
     let hand1 = document.querySelector('#hand1-input').value;
@@ -46,19 +35,16 @@ const rockPaperScissors = () => {
         output('#hand1', '🤜');
         output('#hand2', '🤛')
         output('#winner', 'tie!');
-        // return('It\'s a tie!')
     } else if 
         ((hand1 === 'rock' && hand2 === 'scissors') || (hand1 === 'paper' && hand2 === 'rock') || (hand1 === 'scissors' && hand2 === 'paper')) {
         output('#hand1', '🙌');
         output('#hand2', '🖕')
         output('#winner', 'You win!')
-        //   return('Hand one wins!');
 
     } else if ((hand2 === 'rock' && hand1 === 'scissors') || (hand2 === 'paper' && hand1 === 'rock') || (hand2 === 'scissors' && hand1 === 'paper')) {
         output('#hand2', '🙌');
         output('#hand1', '🖕');
         output('#winner', 'Computer wins!')
-        // return('Hand two wins!')
     } else {
       alert('Please enter "rock", "paper", or "scissors"')
     }
@@ -68,16 +54,8 @@ const rockPaperScissors = () => {
     } else {
         document.querySelector('#winner').style.color = "tomato";
     }
-    
-    // window.addEventListener('keyup', function (e) {
-        //     e.preventDefault();
-        //     if (e.keyCode === 13) {
-            //        var button = document.getElementById("submit");
-            //        button.click();
-            //     }
-            //   }, false);
             
-        }
+}
         
         
 
